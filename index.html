@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <div class="filter-block">
+        <select name="pets" class="select-list-counts">
+            <option value="10">Показать 10 элементов</option>
+            <option value="20">Показать 20 элементов</option>
+            <option value="30">Показать 30 элементов</option>
+        </select>
+    </div>
+
+    <div class="filter-block">
+        <select name="pets" class="select-filter">
+            <option value="id">Фильтрация по ID</option>
+            <option value="title">Фильтрация по имени</option>
+            <option value="price-from-less">Фильтрация по цене (к большему)</option>
+            <option value="price-from-more">Фильтрация по цене (к меньшему)</option>
+        </select>
+    </div>
+
+    <h1 class="loader">Загрузка...</h1>
+
+
+    <ul class="products-list">
+        <li class="products-item"><a href="#" class="product-link">Product 1</a></li>
+    </ul>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+@import url("./reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: rgb(210, 210, 210);
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.filter-block {
+    margin: 10px 0px;
+}
+
+.select-filter,
+.select-list-counts {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 300px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.select-filter:hover,
+.select-list-counts:hover {
+    background-color: #dae8fc;
+}
+
+
+.loader {
+    font-size: 30px;
+    margin: 10px 0px;
+}
+
+.products-list {
+    border: 1px solid black;
+    background-color: #fff;
+    display: inline-block;
+    margin: 20px 0px 20px;
+}
+
+.products-item {
+    position: relative;
+}
+
+.product-link {
+    display: inline-block;
+    color: #000;
+    min-width: 300px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.product_up-arrow,
+.product_down-arrow {
+    display: none;
+}
+
+.product-link:hover .product_up-arrow,
+.product-link:hover .product_down-arrow {
+    display: block;
+    position: absolute;
+    left: 7px;
+    width: 12px;
+    height: 17px;
+}
+
+.product-link:hover .product_up-arrow {
+    top: 6px;
+    background: url('./../img/arrow-up.png') 0 0/contain no-repeat;
+}
+
+.product-link:hover .product_down-arrow {
+    bottom: 0;
+    background: url('./../img/arrow-down.png') 0 0/contain no-repeat;
+}
+
+.product-link:hover {
+    background-color: #dae8fc;
+}
+
+.product-link:hover::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: url('./../img/triangle-icon.png') 0 0/contain no-repeat;
+}
+
+.product-link:hover::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+}
+
+li:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.item-pos-input {
+    display: none;
+}
+
+.product-link:hover .item-pos-input {
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    border: 1px solid #000;
+    width: 40px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.product-info {
+    position: absolute;
+    top: -1px;
+    right: -100%;
+    background-color: #dae8fc;
+    width: 300px;
+    min-height: 300px;
+    border: 1px solid black;
+    padding: 20px;
+    border-left: 3px solid black;
+}
+
+.note-text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 300px;
+    padding: 10px;
+    max-width: 300px;
+    border: 2px dashed red;
+}
